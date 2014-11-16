@@ -13,21 +13,18 @@
        </div>
     </div>
     <div class="container">
-      <div class="row">
         {{> loginButtons}}
-      </div>
       {{> app}}
-    </div>
-</body>
+    </div></body>
 
 <template name="app">
-  <div class="row">
   <h1> {{restaurant}} </h1>
-    <ul>
+    <div class="row">
+      <div class="col-md-4">
       {{#each restaurants}}
         {{> restaurant}}
       {{/each}}
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -35,8 +32,8 @@
   	<div class="contents item_detail">
 
 		<div class="item_info container">
-			<h2>No Frill Grill</h2>
-			<h3> Colley Avenue Norfolk<span class="glyphicon glyphicon-chevron-right"></span></h3>
+			<h2>{{name}}</h2>
+			<h3> {{location}}</h3>
 			<div class="rate">
 				<span class="glyphicon glyphicon-star"></span>
 				<span class="glyphicon glyphicon-star"></span>

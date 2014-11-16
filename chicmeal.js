@@ -5,9 +5,20 @@ if (Meteor.isClient) {
 
   Template.app.helpers({
     restaurants: [
-      { name: "Hells Kitchen",  },
-      { name: "No Frill Grill" },
-      { name: "Omar's Carriage House" }
+      { name: "Hells Kitchen",
+        location: "downtown norfolk",
+        meals: [
+
+        ]
+      },
+      { name: "No Frill Grill", location: "ghent norfolk",
+      meals: [
+
+      ] },
+      { name: "Omar's Carriage House", location: "bute norfolk",
+      meals: [
+
+      ] }
     ]
   });
 
