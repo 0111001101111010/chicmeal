@@ -59,9 +59,9 @@ if (Meteor.isClient) {
         e.preventDefault();
 
         StripeCheckout.open({
-            key: 'YOUR PUBLIC KEY',
-            amount: 5000,
-            name: 'Food',
+            key: 'pk_test_FUqfEymuQqGmJrUbvSuZvv5K',
+            amount: 5,
+            name: 'chic',
             description: 'Paying',
             panelLabel: 'Pay Now',
             token: function(res) {
