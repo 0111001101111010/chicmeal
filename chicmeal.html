@@ -2,29 +2,26 @@
   <title>ChicMeal</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> loginButtons}}
-  {{#if currentUser}}
-        <div id="landing">
-          <h1> Welcome {{currentUser.username}} </h1>
-        </div>
-  {{/if}}
-  {{> app}}
-
+<body >
+   <div class="container">
+       <div>
+         {{#if currentUser}}
+           <div id="landing">
+             <h1> Welcome {{currentUser.username}} </h1>
+           </div>
+         {{/if}}
+       </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        {{> loginButtons}}
+      </div>
+      {{> app}}
+    </div>
 </body>
 
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
 <template name="app">
-  <div>
-  Hello
+  <div class="row">
   <h1> {{restaurant}} </h1>
     <ul>
       {{#each restaurant.meals}}
