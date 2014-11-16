@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         {{> loginButtons}}
-      {{> app}}
+      <div id="app">{{> app}}</div>
     </div></body>
 
 <template name="app">
@@ -55,7 +55,11 @@
     </div>
 		<div class="review container">
     </div>
-		<div class="item_buy container"><div class="btn btn-primary">Buy ($20)</div></div>
-
+		<div class="item_buy container">{{>payment}}
+    </div>
 	</div>
+</template>
+
+<template name="payment">
+    <button class="btn btn-primary">Order</button>
 </template>
