@@ -2,9 +2,7 @@
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
-  Session.setDefault("restaurant", 0);
-  Session.setDefault("meal", 0);
-  Session.setDefault("pay", 0);
+  Session.setDefault("view", "first");
   Template.app.helpers({
     restaurants: [
       {

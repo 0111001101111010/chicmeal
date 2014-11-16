@@ -17,16 +17,20 @@
     <div class="container">
         {{> loginButtons}}
       <div id="app">{{> app}}</div>
-    </div></body>
+    </div>
+
+</body>
 
 <template name="app">
   <h1> Chic Meal </h1>
     <div class="row">
+      {{#if value="first"}}
       <div class="col-md-4">
       {{#each restaurants}}
         {{> restaurant}}
       {{/each}}
     </div>
+    {{/if}}
   </div>
 </template>
 
