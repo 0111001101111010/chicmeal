@@ -54,6 +54,22 @@ if (Meteor.isClient) {
   Template.app.events({
     'click .btn': function (event){
       console.log("buying", this.name);
+    },
+    'click #pay': function(e) {
+        e.preventDefault();
+
+        StripeCheckout.open({
+            key: 'YOUR PUBLIC KEY',
+            amount: 5000,
+            name: 'Food',
+            description: 'Paying',
+            panelLabel: 'Pay Now',
+            token: function(res) {
+                // Do something with res.id
+                // Store it in Mongo and/or create a charge on the server-side
+                console.info(res);
+            }
+        });
     }
   });
 
