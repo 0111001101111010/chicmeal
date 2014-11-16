@@ -8,10 +8,11 @@
   {{> hello}}
   {{> loginButtons}}
   {{#if currentUser}}
-        <form class="new-task">
-          <input type="text" name="text" placeholder="Type to add new tasks" />
-        </form>
-      {{/if}}
+        <div id="landing">
+          <h1> Welcome {{currentUser.username}} </h1>
+        </div>
+
+  {{/if}}
 </body>
 
 
