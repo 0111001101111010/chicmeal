@@ -1,16 +1,14 @@
-Orders = new Mongo.Collection("orders");
-restaurants = new Mongo.Collection("restaurants");
-
-
 
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
 
   Template.app.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
+    restaurants: [
+      { name: "Hells Kitchen",  },
+      { name: "No Frill Grill" },
+      { name: "Omar's Carriage House" }
+    ]
   });
 
 
