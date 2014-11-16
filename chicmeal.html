@@ -6,7 +6,14 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+  {{> loginButtons}}
+  {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
 </body>
+
 
 <template name="hello">
   <button>Click Me</button>
