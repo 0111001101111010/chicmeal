@@ -20,7 +20,7 @@ if (Meteor.isClient) {
   });
 
   Template.app.events({
-    'hover div': function () {
+    'on:hover div': function () {
       console.log("inside app");
     }
   });
