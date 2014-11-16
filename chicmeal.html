@@ -11,12 +11,25 @@
         <div id="landing">
           <h1> Welcome {{currentUser.username}} </h1>
         </div>
-
   {{/if}}
+  {{> app}}
+
 </body>
 
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="app">
+  <div>
+  <h1>Hello</h1>
+  <h1> {{restaurant}} </h1>
+    <ul>
+      {{#each restaurant.meals}}
+        {{> meals}}
+      {{/each}}
+    </ul>
+  </div>
 </template>
