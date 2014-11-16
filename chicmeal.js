@@ -8,27 +8,52 @@ if (Meteor.isClient) {
         name: "Hells Kitchen",
         location: "downtown norfolk",
         meals: [
-
-        ]
+          {
+           name: "meal option",
+           picture: ["http://placehold.it/200x200"]
+          },
+          {
+          name: "meal option",
+          picture: ["http://placehold.it/200x200"]
+         }
+        ],
+        active: true
       },
       {
         name: "No Frill Grill",
         location: "ghent norfolk",
         meals: [
-
-        ]
+          {
+           name: "meal option",
+           picture: ["http://placehold.it/200x200"]
+          },
+          {
+          name: "meal option",
+          picture: ["http://placehold.it/200x200"]
+         }
+        ],
+        active: true
       },
       { name: "Omar's Carriage House",
         location: "bute norfolk",
         meals: [
-
-      ]}
+          {
+           name: "meal option",
+           picture: ["http://placehold.it/200x200"]
+          },
+          {
+          name: "meal option",
+          picture: ["http://placehold.it/200x200"]
+         }
+        ],
+        active: true
+      }
     ],
   });
 
   Template.app.events({
     'click .btn': function (event){
-      console.log(buying, this.restaurant);
+      console.log("buying", this.name);
     }
   });
 
