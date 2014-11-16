@@ -2,7 +2,6 @@
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
-
   Template.app.helpers({
     restaurants: [
       {
@@ -24,9 +23,14 @@ if (Meteor.isClient) {
         meals: [
 
       ]}
-    ]
+    ],
   });
 
+  Template.app.events({
+    'click .btn': function (event){
+      console.log(buying, this.restaurant);
+    }
+  });
 
   // At the bottom of the client code
   Accounts.ui.config({
