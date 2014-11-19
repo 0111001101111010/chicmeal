@@ -1,55 +1,17 @@
+var Restaurants = new Mongo.Collection('restaurants');
+
+
+Router.route('/', function () {
+  this.render('app');
+});
+
 
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
   Session.setDefault("view", "first");
   Template.app.helpers({
-    restaurants: [
-      {
-        name: "Hells Kitchen",
-        location: "downtown norfolk",
-        meals: [
-          {
-           name: "meal option",
-           picture: ["http://placehold.it/200x200"]
-          },
-          {
-          name: "meal option",
-          picture: ["http://placehold.it/200x200"]
-         }
-        ],
-        active: true
-      },
-      {
-        name: "No Frill Grill",
-        location: "ghent norfolk",
-        meals: [
-          {
-           name: "meal option",
-           picture: ["http://placehold.it/200x200"]
-          },
-          {
-          name: "meal option",
-          picture: ["http://placehold.it/200x200"]
-         }
-        ],
-        active: true
-      },
-      { name: "Omar's Carriage House",
-        location: "bute norfolk",
-        meals: [
-          {
-           name: "meal option",
-           picture: ["http://placehold.it/200x200"]
-          },
-          {
-          name: "meal option",
-          picture: ["http://placehold.it/200x200"]
-         }
-        ],
-        active: true
-      }
-    ],
+    "Restaurants": Restaurants.find()
   });
 
   Template.app.events({
@@ -84,8 +46,11 @@ if (Meteor.isClient) {
   });
 }
 
+
+
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
   });
+  // code to run on server at startup
+
 }
